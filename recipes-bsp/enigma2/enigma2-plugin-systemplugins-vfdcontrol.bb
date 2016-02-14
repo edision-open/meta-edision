@@ -10,11 +10,11 @@ SRC_URI = "file://__init__.py \
 "
 
 S = "${WORKDIR}"
-DEST = "${D}/usr/lib/enigma2/python/Plugins/Extensions/VfdControl"
+DEST = "${D}/usr/lib/enigma2/python/Plugins/SystemPlugins/VfdControl"
 
-PR = "r0"
+PR = "r1"
 
-FILES_${PN} = "/usr/lib/enigma2/python/Plugins/Extensions/VfdControl"
+FILES_${PN} = "/usr/lib/enigma2/python/Plugins/SystemPlugins/VfdControl"
 
 inherit autotools pkgconfig
 
