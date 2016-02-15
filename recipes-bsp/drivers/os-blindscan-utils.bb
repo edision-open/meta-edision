@@ -13,13 +13,14 @@ RPROVIDES_os-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
 
 SRC_URI = "file://blindscan file://tda1002x"
 
-PV = "1.0"
-PR = "r0"
+PV = "1.1"
 
 S = "${WORKDIR}/"
 
 FILES_os-blindscan-dvbs-utils = "${bindir}/blindscan"
 FILES_os-blindscan-dvbc-utils = "${bindir}/tda1002x"
+
+INHIBIT_PACKAGE_STRIP = "1"
 
 do_install() {
 	install -d ${D}/${bindir}/
