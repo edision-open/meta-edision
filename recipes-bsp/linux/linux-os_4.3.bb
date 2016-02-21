@@ -19,9 +19,10 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-MACHINE_KERNEL_PR = "r0"
+MACHINE_KERNEL_PR = "r1"
 
 SRC_URI = "https://github.com/22ktv/linux/archive/brcmstb-${PV}.tar.gz \
+	file://add-proc-cpu-mhz.patch \
 	file://defconfig \
 	"
 
