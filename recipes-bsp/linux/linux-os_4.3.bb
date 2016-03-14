@@ -49,8 +49,9 @@ kernel_do_install_append() {
 pkg_postinst_kernel-image () {
 	if [ "x$D" == "x" ]; then
 		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
-			flash_eraseall /dev/mtd0
-			nandwrite -p /dev/mtd0 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
+			MTD_DEVICE=$(grep 'kernel' /proc/mtd | awk -F: '{print $1}')
+			flash_eraseall /dev/${MTD_DEVICE}
+			nandwrite -p /dev/${MTD_DEVICE} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
 		fi
 	fi
 	true
