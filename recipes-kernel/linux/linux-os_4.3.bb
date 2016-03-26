@@ -4,8 +4,6 @@ LICENSE = "GPLv2"
 
 COMPATIBLE_MACHINE = "osmini"
 
-KERNEL_RELEASE = "4.3.0"
-
 SRC_URI[md5sum] = "f4ee0d801a928ee1c091f0556f7d8e0e"
 SRC_URI[sha256sum] = "24b3981c487b9fda3b0706eba89f59d0dfa76a9dbf1842235453544f3d1bdafe"
 

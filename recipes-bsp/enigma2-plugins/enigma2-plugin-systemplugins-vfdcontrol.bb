@@ -33,4 +33,3 @@ addtask post_install after do_install before do_package
 do_configure_prepend() {
 	sed -i 's/AM_INIT_AUTOMAKE.*$/AM_INIT_AUTOMAKE([foreign subdir-objects])/' ${S}/configure.ac ${S}/configure.ac
 }
-

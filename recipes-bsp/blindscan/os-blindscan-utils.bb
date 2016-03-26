@@ -23,7 +23,7 @@ FILES_os-blindscan-dvbc-utils = "${bindir}/tda1002x"
 INHIBIT_PACKAGE_STRIP = "1"
 
 do_install() {
-	install -d ${D}/${bindir}/
-	install -m 0755 "${S}/tda1002x" "${D}/${bindir}"
-	install -m 0755 "${S}/blindscan" "${D}/${bindir}"
+	install -d ${D}${bindir}
+	install -m 0755 ${S}/tda1002x ${D}${bindir}
+	install -m 0755 ${S}/blindscan ${D}${bindir}
 }
