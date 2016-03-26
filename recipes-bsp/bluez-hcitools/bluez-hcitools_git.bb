@@ -24,3 +24,4 @@ do_install_append_xc7362() {
 	install -m 755 ${S}/hciattach ${D}/usr/sbin/hciattach_rtk
 }
 
+RDEPENDS_${PN} = "firmware-rtl8723bs"
