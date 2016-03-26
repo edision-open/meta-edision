@@ -19,3 +19,9 @@ do_install() {
 	install -d ${D}${base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/staging/rtl8723bs
 	install -m 0644 ${S}/r8723bs.ko ${D}${base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/staging/rtl8723bs
 }
+
+inherit gitpkgv
+
+python do_package_prepend() {
+    d.setVar('PKGV', ''.join([d.getVar("KERNEL_VERSION", True).split("-")[0], '+', 'git${GITPKGV}']))
+}
