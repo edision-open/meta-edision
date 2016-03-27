@@ -5,15 +5,15 @@ LICENSE = "CLOSED"
 
 COMPATIBLE_MACHINE = "osmini"
 
-KV = "4.3.0"
-SRCDATE = "20160314"
+KV = "4.5.0"
+SRCDATE = "20160328"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
 
 RDEPENDS_${PN} += "firmware-mn8847x"
 
-SRC_URI = "file://linux-${KV}-${MACHINE}-${SRCDATE}.tar.gz"
+SRC_URI = "https://github.com/open-edision/os-dvb-modules/raw/master/linux-${KV}-${MACHINE}-${SRCDATE}.tar.gz"
 
 S = "${WORKDIR}"
 
@@ -38,5 +38,5 @@ do_install() {
 	echo mn88473 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "a5a7fabba3398212d077021eb232f3f8"
-SRC_URI[sha256sum] = "fcd7d2697fcba52a0284056fb81203ab3dd83a22cd3689ab8aeacc1e7177c327"
+SRC_URI[md5sum] = "a01bc06de94119438a21fb5170a4659a"
+SRC_URI[sha256sum] = "c8b228c7637c2a4606c92c95b52406e2c519fe4adc71d1525ac2e6447cd2f569"
