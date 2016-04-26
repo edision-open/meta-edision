@@ -2,7 +2,7 @@ DESCRIPTION = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 
-COMPATIBLE_MACHINE = "osmini"
+COMPATIBLE_MACHINE = "osmini|osminiplus"
 
 SRC_URI[md5sum] = "c4e70c8b049a70042e4cbdbcc166a7e9"
 SRC_URI[sha256sum] = "d83bf700fc1eeed11fc0376609722b100a087b7c206b492c50371cdfeaf66c59"
