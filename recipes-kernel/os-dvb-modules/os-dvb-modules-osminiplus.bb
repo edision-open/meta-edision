@@ -1,9 +1,9 @@
-DESCRIPTION = "Hardware drivers for Edision OS mini"
+DESCRIPTION = "Hardware drivers for Edision OS mini+"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 
-COMPATIBLE_MACHINE = "osmini"
+COMPATIBLE_MACHINE = "osminiplus"
 
 KV = "4.6.0"
 SRCDATE = "20160613"
@@ -28,15 +28,17 @@ do_compile() {
 
 do_install() {
 	install -d ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/brcmstb-osmini.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/lib/modules/${KV}/extra/brcmstb-osminiplus.ko ${D}${base_libdir}/modules/${KV}/extra
 	install -m 0644 ${S}/lib/modules/${KV}/extra/fts260.ko ${D}${base_libdir}/modules/${KV}/extra
 	install -m 0644 ${S}/lib/modules/${KV}/extra/mn88473.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/lib/modules/${KV}/extra/ftm4862.ko ${D}${base_libdir}/modules/${KV}/extra
 
 	install -d ${D}${sysconfdir}/modules-load.d
-	echo brcmstb-osmini >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
+	echo brcmstb-osminiplus >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 	echo fts260 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 	echo mn88473 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
+	echo ftm4862 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "b8902f074226e821266f2f11e7241761"
-SRC_URI[sha256sum] = "b839e522a4760be4128dbfa2b8ba4c320b9b163ee2ffbc0d8664ccaa2c512c9b"
+SRC_URI[md5sum] = "b249e97fe9fd20bed1626533ccd26a8a"
+SRC_URI[sha256sum] = "d38796e27c861ee7bf461b7e4ab8eeb6e4d889387c9cf71c45de788767b5ee4c"
