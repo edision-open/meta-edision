@@ -6,7 +6,7 @@ LICENSE = "CLOSED"
 COMPATIBLE_MACHINE = "osmini"
 
 KV = "4.6.0"
-SRCDATE = "20160601"
+SRCDATE = "20160613"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
@@ -38,5 +38,5 @@ do_install() {
 	echo mn88473 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "c0a40bd608bc95bb49d23ce19c0bd363"
-SRC_URI[sha256sum] = "cca05decfd99c666bd392c4b60e1295773fdc8b8f1e024261ff018aaef18d85c"
+SRC_URI[md5sum] = "b8902f074226e821266f2f11e7241761"
+SRC_URI[sha256sum] = "b839e522a4760be4128dbfa2b8ba4c320b9b163ee2ffbc0d8664ccaa2c512c9b"
