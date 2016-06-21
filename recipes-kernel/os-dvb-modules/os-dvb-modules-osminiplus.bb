@@ -6,7 +6,7 @@ LICENSE = "CLOSED"
 COMPATIBLE_MACHINE = "osminiplus"
 
 KV = "4.6.0"
-SRCDATE = "20160613"
+SRCDATE = "20160621"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
@@ -40,5 +40,5 @@ do_install() {
 	echo ftm4862 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "b249e97fe9fd20bed1626533ccd26a8a"
-SRC_URI[sha256sum] = "d38796e27c861ee7bf461b7e4ab8eeb6e4d889387c9cf71c45de788767b5ee4c"
+SRC_URI[md5sum] = "d94dda76d29ec94f3a1d57f75e189d12"
+SRC_URI[sha256sum] = "4b7d079f8a160c86f8b6f2627035e975f5677e715f808b13c136ff41fbdb03fd"
