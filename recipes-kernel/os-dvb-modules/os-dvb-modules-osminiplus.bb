@@ -5,8 +5,8 @@ LICENSE = "CLOSED"
 
 COMPATIBLE_MACHINE = "osminiplus"
 
-KV = "4.6.0"
-SRCDATE = "20160621"
+KV = "4.6.3"
+SRCDATE = "20160707"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
@@ -30,15 +30,15 @@ do_install() {
 	install -d ${D}${base_libdir}/modules/${KV}/extra
 	install -m 0644 ${S}/lib/modules/${KV}/extra/brcmstb-osminiplus.ko ${D}${base_libdir}/modules/${KV}/extra
 	install -m 0644 ${S}/lib/modules/${KV}/extra/fts260.ko ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/mn88473.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/lib/modules/${KV}/extra/sp988x.ko ${D}${base_libdir}/modules/${KV}/extra
 	install -m 0644 ${S}/lib/modules/${KV}/extra/ftm4862.ko ${D}${base_libdir}/modules/${KV}/extra
 
 	install -d ${D}${sysconfdir}/modules-load.d
 	echo brcmstb-osminiplus >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 	echo fts260 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
-	echo mn88473 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
+	echo sp988x >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 	echo ftm4862 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "d94dda76d29ec94f3a1d57f75e189d12"
-SRC_URI[sha256sum] = "4b7d079f8a160c86f8b6f2627035e975f5677e715f808b13c136ff41fbdb03fd"
+SRC_URI[md5sum] = "00203eedf7811f185f0491903e30d532"
+SRC_URI[sha256sum] = "699ebf34a984cbbf8c839ab2d640faa2866d96c081e544e340f3b16c340b1f2a"

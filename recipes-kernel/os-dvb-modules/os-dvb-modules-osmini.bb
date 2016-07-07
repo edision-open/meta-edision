@@ -5,8 +5,8 @@ LICENSE = "CLOSED"
 
 COMPATIBLE_MACHINE = "osmini"
 
-KV = "4.6.0"
-SRCDATE = "20160621"
+KV = "4.6.3"
+SRCDATE = "20160707"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
@@ -30,13 +30,13 @@ do_install() {
 	install -d ${D}${base_libdir}/modules/${KV}/extra
 	install -m 0644 ${S}/lib/modules/${KV}/extra/brcmstb-osmini.ko ${D}${base_libdir}/modules/${KV}/extra
 	install -m 0644 ${S}/lib/modules/${KV}/extra/fts260.ko ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/mn88473.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/lib/modules/${KV}/extra/sp988x.ko ${D}${base_libdir}/modules/${KV}/extra
 
 	install -d ${D}${sysconfdir}/modules-load.d
 	echo brcmstb-osmini >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 	echo fts260 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
-	echo mn88473 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
+	echo sp988x >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "86102a079dca039420e59dbc4f7048a9"
-SRC_URI[sha256sum] = "6e051fa05c2b4fb3c905e428f107716509ecc8d72023ed6ef274f2c23307f0e3"
+SRC_URI[md5sum] = "b0e064908c13ee01980af84a176fd7de"
+SRC_URI[sha256sum] = "b298cb3f6bb70b9d5cc43536ecfb3c32d486f4121efb87a2178faaf5a599e86d"
