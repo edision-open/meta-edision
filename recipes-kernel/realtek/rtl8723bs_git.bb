@@ -7,7 +7,7 @@ require conf/license/license-gplv2.inc
 PR = "r0"
 
 SRC_URI = "git://github.com/22ktv/rtl8723bs.git"
-SRCREV = "0fb78de6be7332b4fa8998aa6163118c7cf9f9d4"
+SRCREV = "6ffeb6d03f77c16e47e50a5045dbfcf45de03f6a"
 
 S = "${WORKDIR}/git"
 
