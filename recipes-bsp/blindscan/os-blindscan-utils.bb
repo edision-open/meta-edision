@@ -13,7 +13,7 @@ RPROVIDES_os-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
 
 SRC_URI = "file://blindscan file://tda1002x"
 
-PV = "1.4"
+PV = "1.5"
 
 S = "${WORKDIR}"
 
