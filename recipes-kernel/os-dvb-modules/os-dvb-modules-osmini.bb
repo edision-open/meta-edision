@@ -6,7 +6,7 @@ LICENSE = "CLOSED"
 COMPATIBLE_MACHINE = "osmini"
 
 KV = "4.7.0"
-SRCDATE = "20160808"
+SRCDATE = "20160822"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
@@ -38,5 +38,5 @@ do_install() {
 	echo sp988x >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "3eb0c307bcdbf8451fab757c5407eacd"
-SRC_URI[sha256sum] = "13a1cc480de513664bbca570b5649792e444c41c2706753637dafb2c088d47d1"
+SRC_URI[md5sum] = "dd0e1c23eefbe59e1eae363c93df398a"
+SRC_URI[sha256sum] = "6b70e159afab53d62c0ad85b15f68bbe7c3639c3afe6613c13dae6da396d52a8"
