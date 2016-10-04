@@ -5,8 +5,8 @@ LICENSE = "CLOSED"
 
 COMPATIBLE_MACHINE = "osmega"
 
-KV = "4.7.0"
-SRCDATE = "20160928"
+KV = "4.8.0"
+SRCDATE = "20161004"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
@@ -38,5 +38,5 @@ do_install() {
 	echo ftm4862 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "8128b96df74f54818612aab24e4826d9"
-SRC_URI[sha256sum] = "4c0ec57dfac3102721e4e1574423c11af2c218484d5b5cebb23ee8283b675276"
+SRC_URI[md5sum] = "4132c4a1b3f99d71991ce75736e3a33c"
+SRC_URI[sha256sum] = "7653d79b5cc9d90450e01863972b275c5bbfb15c2b4d0c9f4cc1d819b1471f78"
