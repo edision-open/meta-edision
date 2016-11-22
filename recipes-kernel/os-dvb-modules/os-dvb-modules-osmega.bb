@@ -6,14 +6,14 @@ LICENSE = "CLOSED"
 COMPATIBLE_MACHINE = "osmega"
 
 KV = "4.8.0"
-SRCDATE = "20161114"
+SRCDATE = "20161122"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
 
 RDEPENDS_${PN} += "firmware-mn8847x"
 
-SRC_URI = "https://github.com/open-edision/os-dvb-modules/raw/master/linux-${KV}-${MACHINE}-${SRCDATE}.tar.gz"
+SRC_URI = "https://github.com/open-edision/os-dvb-modules/raw/master/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 
@@ -28,9 +28,9 @@ do_compile() {
 
 do_install() {
 	install -d ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/brcmstb-osmega.ko ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/ci.ko ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/ftm4862.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/brcmstb-osmega.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/ci.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/ftm4862.ko ${D}${base_libdir}/modules/${KV}/extra
 
 	install -d ${D}${sysconfdir}/modules-load.d
 	echo brcmstb-osmega >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
@@ -38,5 +38,5 @@ do_install() {
 	echo ftm4862 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "f5822438ee3e06e4b9efd407f452625e"
-SRC_URI[sha256sum] = "2d948f6e2fb8c412a6f95998b80003803955805704d0d6c24cf08ca7458f99bb"
+SRC_URI[md5sum] = "51a4aaa4fa7d0f948fa664de95ba255c"
+SRC_URI[sha256sum] = "9b92a2f637be8f032f2ba0161fbd60355acdd5b163a1c8d20504672d35f13e0b"

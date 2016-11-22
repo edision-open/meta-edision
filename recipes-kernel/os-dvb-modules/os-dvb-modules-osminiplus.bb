@@ -6,14 +6,14 @@ LICENSE = "CLOSED"
 COMPATIBLE_MACHINE = "osminiplus"
 
 KV = "4.8.0"
-SRCDATE = "20161114"
+SRCDATE = "20161122"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
 
 RDEPENDS_${PN} += "firmware-mn8847x"
 
-SRC_URI = "https://github.com/open-edision/os-dvb-modules/raw/master/linux-${KV}-${MACHINE}-${SRCDATE}.tar.gz"
+SRC_URI = "https://github.com/open-edision/os-dvb-modules/raw/master/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 
@@ -28,10 +28,10 @@ do_compile() {
 
 do_install() {
 	install -d ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/brcmstb-osminiplus.ko ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/fts260.ko ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/sp988x.ko ${D}${base_libdir}/modules/${KV}/extra
-	install -m 0644 ${S}/lib/modules/${KV}/extra/ftm4862.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/brcmstb-osminiplus.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/fts260.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/sp988x.ko ${D}${base_libdir}/modules/${KV}/extra
+	install -m 0644 ${S}/ftm4862.ko ${D}${base_libdir}/modules/${KV}/extra
 
 	install -d ${D}${sysconfdir}/modules-load.d
 	echo brcmstb-osminiplus >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
@@ -40,5 +40,5 @@ do_install() {
 	echo ftm4862 >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
 
-SRC_URI[md5sum] = "8b9b528b3d5f29482984a07d9324cd2e"
-SRC_URI[sha256sum] = "55ac04202e251215bd02d7f1d9f356a35f581b2b57b1509222efecc0de3cd0a8"
+SRC_URI[md5sum] = "d3caa4ecf2a5d41eb67f17eef02b0822"
+SRC_URI[sha256sum] = "535f3de66140d58811033b159cd0ae633ea058888ded812b05ff269fa95a7017"
