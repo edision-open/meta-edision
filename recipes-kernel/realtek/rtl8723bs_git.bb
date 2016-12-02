@@ -25,3 +25,5 @@ inherit gitpkgv
 python do_package_prepend() {
     d.setVar('PKGV', ''.join([d.getVar("KERNEL_VERSION", True).split("-")[0], '+', 'git${GITPKGV}']))
 }
+
+RDEPENDS_${PN} = "firmware-rtl8723bs"
