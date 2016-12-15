@@ -23,8 +23,8 @@ do_install() {
 }
 
 python do_package_prepend() {
-    d.appendVar('PKGV', '-')
-    d.appendVar('PKGV', d.getVar("KERNEL_VERSION", True).split("-")[0])
+    d.prependVar('PKGV', '+')
+    d.prependVar('PKGV', d.getVar("KERNEL_VERSION", True).split("-")[0])
 }
 
 RDEPENDS_${PN} = "firmware-rtl8723bs"
