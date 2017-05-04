@@ -11,6 +11,7 @@ SRC_URI = "https://github.com/anthonywong/rtl8723bs/archive/v${PV}.tar.gz \
 	file://rtl8723bs-remove-debug.patch \
 	file://rtl8723bs-gcc5.patch \
 	file://rtl8723bs-add-4.8-support.patch \
+	file://rtl8723bs-add-4.11-support.patch \
 	"
 
 S = "${WORKDIR}/rtl8723bs-${PV}"
