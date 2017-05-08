@@ -1,10 +1,10 @@
 KV = "4.10.0"
-SRCDATE = "20170410"
+SRCDATE = "20170508"
 MODNAMES = "brcmstb-${MACHINE} ci ftm4862 fts260 sp988x"
 
 require os-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osmini"
 
-SRC_URI[md5sum] = "2fe3d8d8bf0b4fd28137eba072eb5f8b"
-SRC_URI[sha256sum] = "363cf8e2f4cf22df3c2f82f307ad7b9454a250537b5504bdb83fe559b43b69be"
+SRC_URI[md5sum] = "eb648ed1f9afe232285f7438c92103bb"
+SRC_URI[sha256sum] = "664579b23328cb9825058d28126c1adf31fcd625dcb07836fb01c82f0387d0fc"
