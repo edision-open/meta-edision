@@ -1,7 +1,7 @@
 SUMMARY = "Firmware for mn8847x"
 LICENSE = "CLOSED"
 
-PACKAGE_ARCH = "all"
+inherit allarch
 
 SRC_URI = "file://mn8847x.zip"
 
