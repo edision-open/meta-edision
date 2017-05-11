@@ -1,7 +1,7 @@
 SUMMARY = "Firmware for rtl8723bs"
 LICENSE = "CLOSED"
 
-PACKAGE_ARCH = "all"
+inherit allarch
 
 PR = "r0"
 
