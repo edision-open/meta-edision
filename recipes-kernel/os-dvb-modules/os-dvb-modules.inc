@@ -8,7 +8,7 @@ PR = "r0"
 
 RDEPENDS_${PN} += "firmware-mn8847x"
 
-SRC_URI = "https://github.com/open-edision/edision-driver/releases/download/${SRCDATE}/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
+SRC_URI = "https://github.com/edision-open/edision-driver/releases/download/${SRCDATE}/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 
