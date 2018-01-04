@@ -1,10 +1,10 @@
 KV = "4.8.17"
-SRCDATE = "20171213"
+SRCDATE = "20180105"
 MODNAMES = "linuxdvb"
 
 require os-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osninoplus"
 
-SRC_URI[md5sum] = "2250ef04f3678210945efc4c0566226d"
-SRC_URI[sha256sum] = "1a637ea65b26634ed6bc51bb5dfb094896b3236104cc91caaa8bcf559a8e7a08"
+SRC_URI[md5sum] = "e8fa67b6e798d1fb4d5a72a7d6bf4af3"
+SRC_URI[sha256sum] = "2c9f4dd4ecb5bad1287beb0eacafb6daab2b902891ebeeb9c85d9a960b0ab2e9"
