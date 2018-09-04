@@ -1,0 +1,10 @@
+KV = "4.18.0"
+SRCDATE = "20180904"
+MODNAMES = "brcmstb-${MACHINE} ci avl6261 avl6862 si2183"
+
+require os-dvb-modules.inc
+
+COMPATIBLE_MACHINE = "osmio4k"
+
+SRC_URI[md5sum] = "d68388615f20d43286f3363b204b99fd"
+SRC_URI[sha256sum] = "b7a70eb043e46493c96d2160bc7c0330201b6108900f1e7ec96c54fe85d138b7"
