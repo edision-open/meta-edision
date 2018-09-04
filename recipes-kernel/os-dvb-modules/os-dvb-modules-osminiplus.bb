@@ -2,6 +2,8 @@ KV = "4.11.0"
 SRCDATE = "20171106"
 MODNAMES = "brcmstb-${MACHINE} ci ftm4862 fts260 sp988x"
 
+RDEPENDS_${PN} += "firmware-mn8847x"
+
 require os-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osminiplus"
