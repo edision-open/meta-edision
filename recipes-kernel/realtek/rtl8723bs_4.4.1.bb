@@ -4,6 +4,8 @@ SECTION = "kernel/modules"
 LICENSE = "GPLv2"
 require conf/license/license-gplv2.inc
 
+COMPATIBLE_MACHINE = "osmega|osmini|osminiplus|osnino|osninoplus|osninopro"
+
 PR = "r0"
 
 SRC_URI = "https://github.com/anthonywong/rtl8723bs/archive/v${PV}.tar.gz \
