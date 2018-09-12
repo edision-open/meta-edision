@@ -1,6 +1,5 @@
 IMAGE_CLASSES += "osmio4k-emmcimg"
 IMAGE_FSTYPES ?= "emmcimg tar.bz2"
-IMAGE_ROOTFS_SIZE ?= "294912"
 
 IMAGEDIR ?= "${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
