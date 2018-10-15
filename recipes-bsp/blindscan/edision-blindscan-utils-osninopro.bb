@@ -1,8 +1,8 @@
-PV = "20180816"
+PV = "20181015"
 
 require edision-blindscan-utils.inc
 
 COMPATIBLE_MACHINE = "osninopro"
 
-SRC_URI[md5sum] = "78fba319f7b0b0daf55579a11e468f5a"
-SRC_URI[sha256sum] = "26ca57e3cda01f144ff71f9fbcb5bef11687f414763bee266ce74361da6c626c"
+SRC_URI[md5sum] = "e9eed4bad2cee6bce3d4a6f1df8a89c9"
+SRC_URI[sha256sum] = "919e6f00317a82c4dde5c07ee13beaf92b4076c022ce454b54dd0ee84d6a1ab8"
