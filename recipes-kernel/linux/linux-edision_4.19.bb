@@ -8,7 +8,7 @@ SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v4.x/linux-${PV}.tar.xz;name=kernel 
 
 COMPATIBLE_MACHINE = "osmio4k"
 
-SRC_URI[kernel.md5sum] = "bee5fe53ee1c3142b8f0c12c0d3348f9"
-SRC_URI[kernel.sha256sum] = "19d8bcf49ef530cd4e364a45b4a22fa70714b70349c8100e7308488e26f1eaf1"
-SRC_URI[kernelpatch.md5sum] = "1ffe90a396c3783d9a164b7d2a30fd80"
-SRC_URI[kernelpatch.sha256sum] = "875b16b786803194bb076eaf03fde423688ea9325fc1c01197c30f3764e2688b"
+SRC_URI[kernel.md5sum] = "740a90cf810c2105df8ee12e5d0bb900"
+SRC_URI[kernel.sha256sum] = "0c68f5655528aed4f99dae71a5b259edc93239fa899e2df79c055275c21749a1"
+SRC_URI[kernelpatch.md5sum] = "a74b85b7094ef29827e31212765948b4"
+SRC_URI[kernelpatch.sha256sum] = "3d1d8faf69ab029159419925c383d964a9d5b6fd438588dc323cbe6ec11792b9"
