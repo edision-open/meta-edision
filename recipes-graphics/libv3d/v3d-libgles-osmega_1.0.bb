@@ -1,0 +1,8 @@
+require libv3d.inc
+
+PR = "r0"
+
+COMPATIBLE_MACHINE = "osmega"
+
+SRC_URI[md5sum] = "62816065012295c24a135058c2f829ab"
+SRC_URI[sha256sum] = "81cff908aebdbc4a135099fb6aa83e0bb843242e3d258623a1d610903635a511"
