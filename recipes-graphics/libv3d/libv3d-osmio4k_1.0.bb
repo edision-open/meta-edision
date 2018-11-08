@@ -1,4 +1,5 @@
 require libv3d.inc
+GLES3DIR = "GLES3"
 
 PR = "r0"
 

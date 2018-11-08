@@ -5,6 +5,7 @@ LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PROVIDES = "virtual/libgles2 virtual/egl"
+RPROVIDES_${PN} = "virtual/libgles2 virtual/egl"
 
 SRC_URI = "https://github.com/edision-open/edision-gl/releases/download/v${PV}/${BPN}-${PV}.tar.xz"
 
@@ -23,7 +24,7 @@ do_install() {
 	ln -s libv3ddriver.so.${PV} ${D}${libdir}/libGLESv2.so
 	install -m 0755 -d ${D}/${includedir}
 	install -m 0644 ${S}/include/v3dplatform.h ${D}${includedir}
-	for d in EGL GLES GLES2 GLES3 KHR; do
+	for d in EGL GLES GLES2 ${GLES3DIR} KHR; do
 		install -m 0755 -d ${D}${includedir}/$d
 		for f in ${S}/include/$d/*.h; do
 			install -m 0644 $f ${D}${includedir}/$d
