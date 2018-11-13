@@ -1,5 +1,6 @@
 IMAGE_CLASSES += "osmio4k-emmcimg"
 IMAGE_FSTYPES ?= "emmcimg tar.bz2"
+IMAGE_OVERHEAD_FACTOR = "1.0"
 
 IMAGEDIR ?= "${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
