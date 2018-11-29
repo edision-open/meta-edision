@@ -8,8 +8,7 @@ inherit module
 COMPATIBLE_MACHINE = "osmio4k"
 
 SRC_URI = "${CAF_MIRROR}/qcacld-2.0/snapshot/qcacld-2.0-${PV}.tar.gz \
-    file://qcacld-2.0-add-4.18-support.patch \
-    file://qcacld-2.0-add-4.19-support.patch \
+    file://qcacld-2.0-support.patch \
 "
 
 S = "${WORKDIR}/qcacld-2.0-${PV}"
@@ -24,5 +23,5 @@ python do_package_prepend() {
     d.appendVar('PKGV', d.getVar("KERNEL_VERSION", True).split("-")[0])
 }
 
-SRC_URI[md5sum] = "ee0ff6454c7e603e2612539b8b2b1c16"
-SRC_URI[sha256sum] = "a1c29db50f53d05eb725da50e4185e15a4f62a970a1c08d30c357b541b93b27c"
+SRC_URI[md5sum] = "587a8c3b0eceee6a8e5ba167b708e684"
+SRC_URI[sha256sum] = "6791be6b8a229f02a3d9380c33053b5dd42641c9d5a0a337fe5874707a85ef6e"

@@ -9,10 +9,10 @@ SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v4.x/linux-${PV}.tar.xz;name=kernel 
 
 COMPATIBLE_MACHINE = "osmio4k"
 
-SRC_URI[kernel.md5sum] = "740a90cf810c2105df8ee12e5d0bb900"
-SRC_URI[kernel.sha256sum] = "0c68f5655528aed4f99dae71a5b259edc93239fa899e2df79c055275c21749a1"
-SRC_URI[kernelpatch.md5sum] = "a74b85b7094ef29827e31212765948b4"
-SRC_URI[kernelpatch.sha256sum] = "3d1d8faf69ab029159419925c383d964a9d5b6fd438588dc323cbe6ec11792b9"
+SRC_URI[kernel.md5sum] = "29c910b1e6cee4413dd0639050489881"
+SRC_URI[kernel.sha256sum] = "a38f5606bba1f5611c798541f6c3d43267b8599d9e3167471d4b662e33ff47aa"
+SRC_URI[kernelpatch.md5sum] = "c3c5dea53fa654ccff7a839f828a6155"
+SRC_URI[kernelpatch.sha256sum] = "562c9cf4b49cafb51404ddfdf8ea4f781cbf3028b21f5f2b1090eb038fe03854"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}* ${KERNEL_IMAGEDEST}/findkerneldevice.py"
 
