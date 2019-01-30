@@ -6,5 +6,5 @@ require os-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osmio4k"
 
-SRC_URI[md5sum] = "ef786ca3a9fbcee5adf7d80a56404b06"
-SRC_URI[sha256sum] = "dbb74143d8c2eb08bed636b8c7d8f52a0d067bfed11fb1b764d78947658e3281"
+SRC_URI[md5sum] = "3df6b3282a081b3b53b94740ac22bd5b"
+SRC_URI[sha256sum] = "23af2877d15f0ade985aa95ba155fa597f9ca5b644655887b61fb9e6911377fa"
