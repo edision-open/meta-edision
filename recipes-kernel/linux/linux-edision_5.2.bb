@@ -1,6 +1,8 @@
 require linux-os.inc
 LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
+DEPENDS += "coreutils-native"
+
 SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v5.x/linux-${PV}.tar.xz;name=kernel \
 	https://github.com/edision-open/edision-kernel/releases/download/v${PV}/edision-kernel-${PV}.patch.xz;apply=yes;name=kernelpatch \
 	file://defconfig \
@@ -9,10 +11,10 @@ SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v5.x/linux-${PV}.tar.xz;name=kernel 
 
 COMPATIBLE_MACHINE = "osmio4k|osmio4kplus"
 
-SRC_URI[kernel.md5sum] = "15fbdff95ff98483069ac6e215b9f4f9"
-SRC_URI[kernel.sha256sum] = "d06a7be6e73f97d1350677ad3bae0ce7daecb79c2c2902aaabe806f7fa94f041"
-SRC_URI[kernelpatch.md5sum] = "a35c9d0ec24522ca59613fc2543defec"
-SRC_URI[kernelpatch.sha256sum] = "31795da29b9942fd51ebf659399343e178226b37a294232c649e4e0d34796ee4"
+SRC_URI[kernel.md5sum] = "ddf994de00d7b18395886dd9b30b9262"
+SRC_URI[kernel.sha256sum] = "54ad66f672e1a831b574f5e704e8a05f1e6180a8245d4bdd811208a6cb0ac1e7"
+SRC_URI[kernelpatch.md5sum] = "d04f52ad070cefbbf510a8f64e4dfd35"
+SRC_URI[kernelpatch.sha256sum] = "6733f516ebbd883fa4b13ef2a7551712ba1ddd144160526c631ec950dcddc8a1"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}* ${KERNEL_IMAGEDEST}/findkerneldevice.py"
 
