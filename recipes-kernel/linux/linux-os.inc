@@ -9,6 +9,8 @@ DEPENDS_append_aarch64 = " libgcc"
 KERNEL_CC_append_aarch64 = " ${TOOLCHAIN_OPTIONS}"
 KERNEL_LD_append_aarch64 = " ${TOOLCHAIN_OPTIONS}"
 
+KERNEL_EXTRA_ARGS = "EXTRA_CFLAGS=-Wno-attribute-alias"
+
 # Pick up shared functions
 inherit kernel
 
