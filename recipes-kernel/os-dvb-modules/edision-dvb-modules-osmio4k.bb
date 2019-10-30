@@ -1,5 +1,5 @@
 KV = "5.3.0"
-SRCDATE = "20191019"
+SRCDATE = "20191029"
 MODNAMES = "brcmstb-${MACHINE} ci avl6261 avl6862 si2183"
 
 require os-dvb-modules.inc
