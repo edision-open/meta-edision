@@ -9,7 +9,7 @@ SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v5.x/linux-${PV}.tar.xz;name=kernel 
 	file://findkerneldevice.py \
 	"
 
-COMPATIBLE_MACHINE = "osmio4k|osmio4kplus"
+COMPATIBLE_MACHINE = "osmini4k|osmio4k|osmio4kplus"
 
 SRC_URI[kernel.md5sum] = "c99feaade8047339528fb066ec5f8a49"
 SRC_URI[kernel.sha256sum] = "78f3c397513cf4ff0f96aa7d09a921d003e08fa97c09e0bb71d88211b40567b2"
