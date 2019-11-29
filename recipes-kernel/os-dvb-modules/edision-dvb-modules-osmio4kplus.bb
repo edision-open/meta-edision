@@ -1,10 +1,10 @@
 KV = "5.3.0"
-SRCDATE = "20191029"
+SRCDATE = "20191129"
 MODNAMES = "brcmstb-${MACHINE} ci avl6261 avl6862 si2183"
 
 require os-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osmio4kplus"
 
-SRC_URI[md5sum] = "b2ee1db0ae089f98b8a3c559ea038d71"
-SRC_URI[sha256sum] = "944d951cf036fa59af37fe38f518cebbe7b2c7950fb307d9d53ffca9ffcc0d6c"
+SRC_URI[md5sum] = "9812dd38ea0f75c8f1e32c154cfb3840"
+SRC_URI[sha256sum] = "ffe5bd70f20df16ab42af3ccb5328785f3a21cf8ecbe5bc2e58db47acad541f3"
