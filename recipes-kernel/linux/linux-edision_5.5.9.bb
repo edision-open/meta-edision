@@ -3,10 +3,11 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 DEPENDS += "coreutils-native"
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}/${MACHINE}/${TRANSLATED_TARGET_ARCH}:"
+
 SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v5.x/linux-${PV}.tar.xz;name=kernel \
 	https://github.com/edision-open/edision-kernel/releases/download/v${PV}/edision-kernel-${PV}.patch.xz;apply=yes;name=kernelpatch \
 	file://defconfig \
-	file://multi_v7_defconfig \
 	file://findkerneldevice.py \
 	"
 
@@ -23,12 +24,6 @@ do_shared_workdir_append() {
 	unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
 	make CC="${KERNEL_CC}" LD="${KERNEL_LD}" AR="${KERNEL_AR}" \
 	           -C ${STAGING_KERNEL_DIR} O=${STAGING_KERNEL_BUILDDIR} scripts prepare
-}
-
-kernel_do_configure_prepend_arm() {
-	if [ -f "${WORKDIR}/multi_v7_defconfig" ] && [ ! -f "${B}/.config" ]; then
-		cp "${WORKDIR}/multi_v7_defconfig" "${B}/.config"
-	fi
 }
 
 kernel_do_install_append () {
