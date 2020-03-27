@@ -1,8 +1,8 @@
 require libv3d.inc
 
-PR = "r0"
+PR = "r1"
 
 COMPATIBLE_MACHINE = "osmio4kplus"
 
-SRC_URI[md5sum] = "ce69d44abff7f0052d1ae779c4112931"
-SRC_URI[sha256sum] = "c5f670e2620f331764fa24dfed5db59603cc5e236c17dd89155f581949be04ab"
+SRC_URI[md5sum] = "394b941103c405a36abe2ab46dcaf761"
+SRC_URI[sha256sum] = "3c01b5de6535f4d34ef6157703fcd16807b971cfa403dba0f26340c41169a268"
