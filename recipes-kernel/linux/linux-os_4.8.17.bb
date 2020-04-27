@@ -3,6 +3,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 SRC_URI = "http://source.mynonpublic.com/edision/linux-edision-${PV}.tar.xz \
 	file://defconfig \
+	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
+	file://0003-cp1emu-do-not-use-bools-for-arithmetic.patch \
 	"
 
 COMPATIBLE_MACHINE = "osnino|osninoplus|osninopro"
