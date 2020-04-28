@@ -6,4 +6,4 @@ KERNEL_IMAGETYPE = "zImage"
 #DEFAULTTUNE = "aarch64"
 #KERNEL_IMAGETYPE = "Image.gz"
 
-require conf/machine/include/arm/arch-armv8.inc
+require conf/machine/include/arm/arch-arm64.inc
