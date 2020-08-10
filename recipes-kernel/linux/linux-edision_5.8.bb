@@ -1,9 +1,7 @@
 require linux-os.inc
-LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
+LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
 DEPENDS += "coreutils-native"
-
-FILESEXTRAPATHS_prepend := "${THISDIR}/${BPN}/${MACHINE}/${TRANSLATED_TARGET_ARCH}:"
 
 SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v5.x/linux-${PV}.tar.xz;name=kernel \
 	https://github.com/edision-open/edision-kernel/releases/download/v${PV}/edision-kernel-${PV}.patch.xz;apply=yes;name=kernelpatch \
@@ -13,18 +11,12 @@ SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v5.x/linux-${PV}.tar.xz;name=kernel 
 
 COMPATIBLE_MACHINE = "osmini4k|osmio4k|osmio4kplus"
 
-SRC_URI[kernel.md5sum] = "e9fbbdd378f2a5fefb492d1e39793499"
-SRC_URI[kernel.sha256sum] = "85fb308a8a204e4913e078d50ac94dad05a6aca9cacfe5d6b6fbfbb903f70708"
-SRC_URI[kernelpatch.md5sum] = "b236278e10577cb8d172c71ff84e31f6"
-SRC_URI[kernelpatch.sha256sum] = "1bf802cbc3f16a3bdf1a05a3a089135a31f6d3dd031314a44fa4d4fc06cef662"
+SRC_URI[kernel.md5sum] = "0e5c4c15266218ef26c50fac0016095b"
+SRC_URI[kernel.sha256sum] = "e7f75186aa0642114af8f19d99559937300ca27acaf7451b36d4f9b0f85cf1f5"
+SRC_URI[kernelpatch.md5sum] = "c9c9c716fa8ad2674f8791fcf7991af8"
+SRC_URI[kernelpatch.sha256sum] = "6e9055de7beda40257b595b90dd0627decfd84ab0f757e70211d01e5fe661bd8"
 
 FILES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}* ${KERNEL_IMAGEDEST}/findkerneldevice.py"
-
-do_shared_workdir_append() {
-	unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
-	make CC="${KERNEL_CC}" LD="${KERNEL_LD}" AR="${KERNEL_AR}" \
-	           -C ${STAGING_KERNEL_DIR} O=${STAGING_KERNEL_BUILDDIR} scripts prepare
-}
 
 kernel_do_install_append () {
 	install -d ${D}/${KERNEL_IMAGEDEST}
