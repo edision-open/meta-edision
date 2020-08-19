@@ -1,10 +1,10 @@
 KV = "5.8.0"
-SRCDATE = "20200810"
-MODNAMES = "brcmstb-${MACHINE} ci avl6261 avl6862 si2183"
+SRCDATE = "20200819"
+MODNAMES = "brcmstb-${MACHINE} brcmstb-decoder ci avl6261 avl6862 si2183"
 
 require os-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osmio4kplus"
 
-SRC_URI[md5sum] = "cf4e9d3341c1f2c12071ad27daf3201e"
-SRC_URI[sha256sum] = "5d98f73801e90277ada356a28e6848b7d6218061f8cac3b5ed7a8cc239073f9d"
+SRC_URI[md5sum] = "5e3f6db686f266ba5d2274080bc7ee1a"
+SRC_URI[sha256sum] = "1d07f385ffc9510c38a3905ecf8dd56591a361d7ae19b9204df7067d1e017b15"
