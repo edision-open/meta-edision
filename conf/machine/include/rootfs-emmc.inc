@@ -20,3 +20,7 @@ IMAGE_CMD_emmcimg_append = "\
     zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_multiboot_ofgwrite.zip ${IMAGEDIR}/imageversion ${IMAGEDIR}/kernel.bin ${IMAGEDIR}/rootfs.tar.bz2; \
     rm -rf ${IMAGEDIR}; \
     "
+
+IMAGE_CMD_prepend = "\
+    rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+    "
