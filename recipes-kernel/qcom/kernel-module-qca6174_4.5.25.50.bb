@@ -11,8 +11,8 @@ SRC_URI = "${CAF_MIRROR}/qcacld-2.0/snapshot/qcacld-2.0-${PV}.tar.gz \
     file://qcacld-2.0-support.patch \
 "
 
-SRC_URI[md5sum] = "90a83aacaffc48e6a3eefbe70ef7ebd1"
-SRC_URI[sha256sum] = "b7ed5214c7be2229b69c8925de415437d07796ec9d7c9a15b85337da6e023dc0"
+SRC_URI[md5sum] = "3b5146b9fd104d1e8e109f37cb244ce2"
+SRC_URI[sha256sum] = "69069b42bd64624efec64e35c32f80139aa36685eef4c2b1603b6d9f836b3408"
 
 S = "${WORKDIR}/qcacld-2.0-${PV}"
 
