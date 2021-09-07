@@ -19,6 +19,9 @@ S = "${WORKDIR}/qcacld-2.0-${PV}"
 do_install() {
     install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
     install -m 0644 ${S}/wlan.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
+
+    install -d -m 0755 ${D}${sysconfdir}/modules-load.d
+    echo wlan > ${D}${sysconfdir}/modules-load.d/wlan.conf
 }
 
 python do_package_prepend() {
@@ -26,4 +29,4 @@ python do_package_prepend() {
     d.prependVar('PKGV', d.getVar("KERNEL_VERSION", True).split("-")[0])
 }
 
-KERNEL_MODULE_AUTOLOAD_append = " wlan"
+FILES_${PN} += "${sysconfdir}/modules-load.d/wlan.conf"
