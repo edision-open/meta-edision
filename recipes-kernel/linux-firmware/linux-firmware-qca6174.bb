@@ -6,7 +6,7 @@ COMPATIBLE_MACHINE = "osmio4k|osmio4kplus"
 
 PR = "r1"
 
-SRC_URI = "git://github.com/edision-open/linux-firmware.git"
+SRC_URI = "git://github.com/edision-open/linux-firmware.git;protocol=https"
 
 SRCREV = "5ad65c3de04150106e69b5d6517c838226618798"
 

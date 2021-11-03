@@ -7,7 +7,7 @@ inherit module
 
 COMPATIBLE_MACHINE = "osnino|osninoplus|osninopro"
 
-SRC_URI = "git://github.com/edision-open/RTL8723BS_WiFi_linux.git"
+SRC_URI = "git://github.com/edision-open/RTL8723BS_WiFi_linux.git;protocol=https"
 
 SRCREV = "5ae7e63499beb1f0ccb3815a6a6cf42a0a22e974"
 

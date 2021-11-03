@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://Makefile;md5=ac320a4e1d358e1234ea8489eca682e8"
 
 COMPATIBLE_MACHINE = "osnino|osninoplus|osninopro"
 
-SRC_URI = "git://github.com/edision-open/LINUX_BT_DRIVER_RTL8723D.git"
+SRC_URI = "git://github.com/edision-open/LINUX_BT_DRIVER_RTL8723D.git;protocol=https"
 
 SRCREV = "6a68bd988096b6fc801cda9a2fed1e86164d0c1c"
 
